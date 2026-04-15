@@ -1,0 +1,117 @@
+/*Variables de color */
+:root {
+--blue-dark: #462232;
+--blue-bright: #000203;
+--orange-accent: #b87d86f1;
+--text-white: #ffffff;
+--bg-light: #f7fafc;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+line-height: 1.6;
+color: #333;
+}
+
+/* Header (Flexbox ) */
+.main-header {
+background-color: var(--blue-dark);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 10%;
+color: white;
+}
+
+.logo-box {
+background-color: var(--orange-accent);
+padding: 5px 10px;
+border-radius: 4px;
+font-weight: bold;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 20px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-size: 0.9rem;
+}
+
+/* Hero Section (Imagen azul) */
+.hero {
+background: linear-gradient(to right, var(--blue-dark), var(--blue-bright));
+color: white;
+display: flex;
+padding: 80px 10%;
+align-items: center;
+justify-content: space-between;
+}
+
+.hero-content h1 { font-size: 2.5rem; }
+.highlight { color: var(--orange-accent); }
+.subtitle { font-size: 1.2rem; margin-top: -10px; }
+
+.profile-circle {
+width: 200px;
+height: 200px;
+background-color: #cbd5e0;
+border-radius: 50%;
+overflow: hidden;
+border: 5px solid rgba(255,255,255,0.2);
+}
+
+/* Sobre Mí  */
+.about-section {
+padding: 60px 10%;
+background-color: var(--bg-light);
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.underline {
+width: 50px;
+height: 4px;
+background-color: var(--orange-accent);
+margin: 10px auto;
+}
+
+.about-container {
+display: flex; 
+gap: 40px;
+}
+
+.about-text { flex: 2; }
+.personal-info {
+flex: 1;
+background: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.quote {
+border-left: 4px solid var(--orange-accent);
+padding-left: 15px;
+font-style: italic;
+margin-top: 30px;
+background: #fff5eb;
+padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero, .about-container {
+flex-direction: column;
+text-align: center;
+}
+.about-container { flex-direction: column-reverse; }
+}
